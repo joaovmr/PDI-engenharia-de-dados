@@ -99,7 +99,6 @@ services:
       - ../db_data/clientes.csv:/docker-entrypoint-initdb.d/clientes.csv
       - ../db_data/funcionarios.csv:/docker-entrypoint-initdb.d/funcionarios.csv
       - ../db_data/vendas.csv:/docker-entrypoint-initdb.d/vendas.csv
-      - ../db_data/postgres_data/:/var/lib/postgresql/data
     healthcheck:
       test: ["CMD", "pg_isready", "-U", "airflow"]
       interval: 10s
